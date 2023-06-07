@@ -25,28 +25,24 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1 class="CurrentCity">New York</h1>
+            <h1 id="CurrentCity">New York</h1>
             <ul>
-              <li id="time">Tuesday 11:00</li>
-              <li class="description">Mostly sunny</li>
+              <li>Last updated: <span id="time"></span></li>
+              <li id="description">Mostly sunny</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="sunny"
-                />
+                <img src="" id="icon" />
                 <strong id="temperature">21</strong>
                 <span class="units">°C | <a href="#">°F</a></span>
               </div>
             </div>
             <div class="col-6">
               <ul class="weather-condition">
-                <li>Precipation : 15%</li>
-                <li>Humidity : 45%</li>
-                <li>Wind : 7 mph</li>
+                <li>Humidity : <span id="humidity"></span> %</li>
+                <li>Wind : <span id="wind"></span> mph</li>
               </ul>
             </div>
           </div>
