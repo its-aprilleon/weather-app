@@ -27,15 +27,16 @@ li::first-letter {
 
 .weather-app {
   background-color: rgb(238, 245, 250);
-  border-radius: 15px;
+  border-radius: 10px;
 
   border: 1px solid grey;
   padding: 30px;
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 720px;
+
+  margin: 70px auto;
 }
 
 .overview {
@@ -60,5 +61,15 @@ li::first-letter {
   bottom: -5px;
 }
 a {
+  text-decoration: none;
+  font-size: medium;
+}
+
+.weather-temperature .active {
+  color: rgb(32, 33, 36);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
   text-decoration: none;
 }
