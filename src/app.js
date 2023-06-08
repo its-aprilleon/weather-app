@@ -23,6 +23,48 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "29baaftfaf333ad6ca3704ob80d346c8";
+  let lat = coordinates.latitude;
+  let lon = coordinates.longitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+
+  console.log(apiUrl);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temp">
+                  <span class="weather-temp-max"> 18° </span>
+                  <span class="weather-temp-min"> 12° </span>
+                </div>
+              </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let cityElement = document.querySelector("#CurrentCity");
   cityElement.innerHTML = response.data.city;
@@ -50,6 +92,8 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -63,7 +107,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
@@ -91,3 +134,5 @@ celsiusLink.addEventListener("click", showCelsius);
 
 let fahrenheitLink = document.querySelector("#fah-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
+
+search("Lisbon");
