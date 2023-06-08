@@ -1,9 +1,13 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: url("https://media.istockphoto.com/id/470808586/video/looping-blue-sky-with-clouds.jpg?s=640x640&k=20&c=AXeRmzmeHxnfX0m8OD9_n-U0qnxRBMhsIVXQ-o8XW_g=");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  color: rgb(112, 117, 122);
+  color: rgb(101, 101, 102);
   font-weight: 100;
   margin: 0;
 }
@@ -14,32 +18,37 @@ ul {
   padding: 0px;
 }
 li {
-  color: rgb(135, 135, 135);
-  font-size: 16px;
+  color: rgb(92, 91, 91);
+  font-size: 20px;
   font-weight: 100;
   margin: 0;
   padding: 0;
-  line-height: 16px;
+  line-height: 30px;
 }
 li::first-letter {
   text-transform: uppercase;
 }
 
 .weather-app {
-  background-color: rgb(238, 245, 250);
+  /* background-color: #e6e3e3; */
   border-radius: 10px;
-
+  height: 500px;
   border: 1px solid grey;
   padding: 30px;
+  background-image: url("https://www.freeppt.net/background/april-weather-backgrounds-for-powerpoint.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .weather-app-wrapper {
-  max-width: 720px;
+  max-width: 800px;
 
   margin: 70px auto;
 }
 
 .overview {
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
@@ -75,18 +84,26 @@ a {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
   color: #000;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.6;
+  font-size: 20px;
+  opacity: 0.8;
 }
 .weather-temp-min {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .weather-forecast-temp {
-  font-size: 13px;
+  font-size: 20px;
+}
+#city-input,
+#submit-btn {
+  border-radius: 50px;
+}
+#submit-btn {
+  color: #000;
+  background-color: rgba(106, 255, 0, 0.654);
 }
