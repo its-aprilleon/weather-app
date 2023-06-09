@@ -116,7 +116,6 @@ function search(city) {
   let apiKey = "29baaftfaf333ad6ca3704ob80d346c8";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
-  console.log(apiUrl);
 }
 
 function handleSubmit(event) {
