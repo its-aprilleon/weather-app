@@ -1,6 +1,6 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-image: url("https://media.istockphoto.com/id/470808586/video/looping-blue-sky-with-clouds.jpg?s=640x640&k=20&c=AXeRmzmeHxnfX0m8OD9_n-U0qnxRBMhsIVXQ-o8XW_g=");
+  background-image: url("cloud.png");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +35,7 @@ li::first-letter {
   height: 500px;
   border: 1px solid grey;
   padding: 30px;
-  background-image: url("https://www.freeppt.net/background/april-weather-backgrounds-for-powerpoint.jpg");
+  background-image: url("daisy.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
